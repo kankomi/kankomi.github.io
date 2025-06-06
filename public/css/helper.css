@@ -1,0 +1,47 @@
+/* text */
+.big {
+  font-size: 1.5rem;
+}
+.small {
+  font-size: 0.75rem;
+}
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+
+/* margins */
+.mt-1 {
+  margin-top: 1rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.ml-1 {
+  margin-left: 1rem;
+}
+.mr-1 {
+  margin-right: 1rem;
+}
+p-1 {
+  padding: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+.col {
+  flex-direction: column;
+}
+.row {
+  flex-direction: row;
+  gap: 1rem;
+}
+.align-center {
+  align-items: center;
+}
+.w-full {
+  width: 100%;
+}
