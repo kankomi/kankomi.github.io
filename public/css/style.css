@@ -124,10 +124,12 @@ img {
 
 .big-button {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   color: var(--dark-green);
+  gap: 0.5rem;
 
   background-color: var(--lime-green);
   border-radius: 15px;
@@ -148,6 +150,16 @@ img {
   /*background-color: var(--purple);*/
   /*color: var(--lavender);*/
   transform: scale(1.1);
+}
+
+.hidden-message {
+  display: none;
+}
+
+.big-button:hover .hidden-message {
+  display: block;
+  font-style: italic;
+  font-size: 0.8rem;
 }
 
 .timeline {
