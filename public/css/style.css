@@ -4,8 +4,8 @@
   --purple: #4e2663;
   --lavender: #bf74cd;
 
-  --bg-color: #fff;
-  --text-color: #111;
+  --bg-color: #e6f2ce;
+  --text-color: #40973f;
 }
 
 @font-face {
@@ -122,6 +122,12 @@ img {
   width: 100%;
 }
 
+.wir-heiraten {
+  display: block;
+  margin: auto;
+  width: 300px;
+}
+
 .big-button {
   display: flex;
   flex-direction: column;
@@ -141,7 +147,7 @@ img {
   margin-bottom: 1rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
 
-  font-size:1.2rem;
+  font-size: 1.2rem;
   font-weight: 500;
 
   transition: all 100ms;
