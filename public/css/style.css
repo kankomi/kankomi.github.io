@@ -63,7 +63,7 @@ h3 {
   align-items: center;
 }
 .header_wrapper {
-  margin-left: 1rem;
+  margin-left: 2rem;
   z-index: 1;
 }
 .header_text {
@@ -87,7 +87,7 @@ h3 {
   width: 100%;
   margin-bottom: 2rem;
 
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
 }
 .menu a {
   text-decoration: none;
@@ -139,17 +139,16 @@ img {
   margin: auto;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+
+  font-size:1.2rem;
+  font-weight: 500;
 
   transition: all 100ms;
 }
 .big-button:hover {
-  /*background-color: var(--purple);*/
-  /*color: var(--lavender);*/
   transform: scale(1.1);
+  box-shadow: var(--lime-green) 0 0 30px;
 }
 
 .hidden-message {
