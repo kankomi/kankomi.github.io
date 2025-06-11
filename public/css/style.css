@@ -1,11 +1,14 @@
 :root {
   --lime-green: #bfe6b7;
-  --dark-green: #11210d;
+  --dark-green: #418b40;
   --purple: #4e2663;
   --lavender: #bf74cd;
 
   --bg-color: #e6f2ce;
   --text-color: #40973f;
+
+
+  --logo-width: 400px;
 }
 
 @font-face {
@@ -17,6 +20,16 @@
   font-family: "MeowScript";
   font-size: 1.2rem;
   src: url(/public/fonts/MeowScript-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "AnitypeRedwood";
+  src: url(/public/fonts/AnitypeRedwood-1.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "LavishlyYours";
+  src: url(/public/fonts/LavishlyYours-Regular.ttf) format("truetype");
 }
 
 html {
@@ -33,21 +46,24 @@ body {
 }
 
 h1 {
-  margin: 2rem 0 1rem 0;
+  font-family: "AnitypeRedwood";
+  margin: 3rem 0 1rem 0;
 }
+
 h2 {
-  margin: 0 0 1rem 0;
+  margin: 1rem 0 1rem 0;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 300;
 }
+
 h3 {
-  margin: 0 0 1rem 0;
+  margin-bottom: 1rem;
   font-size: 1.1rem;
   font-weight: 400;
 }
 
 .fancy {
-  font-family: "MeowScript";
+  font-family: "LavishlyYours";
 }
 
 .header {
@@ -57,19 +73,31 @@ h3 {
 
   color: var(--lime-green);
 
-  height: 100px;
+  height: calc(var(--logo-width) * 1.2);
 
   display: flex;
   align-items: center;
+  justify-content: center;
 }
+
 .header_wrapper {
-  margin-left: 2rem;
   z-index: 1;
 }
-.header_text {
-  font-family: "MeowScript";
-  font-size: 2.25rem;
-  font-weight: bold;
+.header::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.1)
+  );
+  backdrop-filter: blur(10px);
+}
+.wir-heiraten {
+  width: var(--logo-width);
 }
 
 .menu {
@@ -89,6 +117,7 @@ h3 {
 
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
 }
+
 .menu a {
   text-decoration: none;
   color: var(--text-color);
@@ -98,35 +127,23 @@ h3 {
 
   transition: all 200ms;
 }
+
 .menu a:hover {
   background-color: var(--lime-green);
 }
 
 .content {
-  padding: 0 1rem 0 1rem;
+  padding: 0 1rem 10rem 1rem;
   margin: auto;
   width: 90vw;
 }
-.mask {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  /*background-color: var(--lime-green);*/
 
-  backdrop-filter: blur(10px);
-}
 
 img {
   max-width: 90vw;
   width: 100%;
 }
 
-.wir-heiraten {
-  display: block;
-  margin: auto;
-  width: 300px;
-}
 
 .big-button {
   display: flex;
@@ -134,17 +151,17 @@ img {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: var(--dark-green);
   gap: 0.5rem;
 
   background-color: var(--lime-green);
+  color: var(--dark-green);
   border-radius: 15px;
   height: 80px;
   width: 200px;
 
   margin: auto;
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
 
   font-size: 1.2rem;
@@ -152,6 +169,7 @@ img {
 
   transition: all 100ms;
 }
+
 .big-button:hover {
   transform: scale(1.1);
   box-shadow: var(--lime-green) 0 0 30px;
@@ -171,13 +189,16 @@ img {
   margin-left: 39px;
   text-align: center;
 }
+
 .outer {
   border-left: 2px solid #333;
 }
+
 .title {
   position: relative;
   font-weight: 600;
 }
+
 .title::before {
   content: "";
   position: absolute;
@@ -197,6 +218,7 @@ img {
   border-radius: 8px;
   max-width: 400px;
 }
+
 .card::before {
   content: "";
   position: absolute;
@@ -209,6 +231,7 @@ img {
     margin: auto;
     width: 800px;
   }
+
   .header_text {
     font-size: 3rem;
   }

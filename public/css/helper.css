@@ -11,6 +11,9 @@
 .italic {
   font-style: italic;
 }
+.center {
+  text-align: center;
+}
 
 /* margins */
 .mt-1 {
