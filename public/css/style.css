@@ -62,6 +62,19 @@ h3 {
   font-weight: 400;
 }
 
+a {
+  color: var(--text-color);
+}
+
+a:visited {
+  color: var(--text-color);
+}
+
+img {
+  max-width: 90vw;
+  width: 100%;
+}
+
 .fancy {
   font-family: "LavishlyYours", serif;
 }
@@ -73,7 +86,8 @@ h3 {
 
   color: var(--lime-green);
 
-  height: calc(var(--logo-width) * 1.2);
+  /* height: calc(var(--logo-width) * 1.2); */
+  height: 100vh;
 
   display: flex;
   align-items: center;
@@ -96,6 +110,18 @@ h3 {
   backdrop-filter: blur(10px);
 }
 
+.arrow-down {
+  z-index: 2;
+  position: absolute;
+  background: url(/public/img/arrow_down.svg) no-repeat;
+  background-size: contain;
+  bottom: 20px;
+  filter: invert(94%) sepia(13%) saturate(637%) hue-rotate(51deg) brightness(94%) contrast(92%);
+  width: 30px;
+  height: 30px;
+  animation: bounce 1.5s infinite;
+}
+
 .wir-heiraten {
   width: var(--logo-width);
 }
@@ -103,6 +129,7 @@ h3 {
 .menu {
   position: sticky;
   top: 0;
+  z-index: 100;
 
   background-color: white;
 
@@ -139,10 +166,6 @@ h3 {
 }
 
 
-img {
-  max-width: 90vw;
-  width: 100%;
-}
 
 
 .big-button {
@@ -168,6 +191,7 @@ img {
   font-weight: 500;
 
   transition: all 100ms;
+  animation: wobble 2s infinite ease-in-out;
 }
 
 .big-button:hover {
@@ -225,8 +249,44 @@ img {
   width: 50%;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes wobble {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.025);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 /* big screens */
 @media only screen and (min-width: 992px) {
+  .header {
+    height: calc(var(--logo-width) * 1.2);
+  }
+
+  .arrow-down {
+    display: none;
+  }
+
   .content {
     margin: auto;
     width: 800px;
