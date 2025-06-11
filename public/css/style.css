@@ -302,7 +302,8 @@ img {
     justify-content: space-between;
   }
 
-  .intro img {
+  .scale-img {
     width: 400px;
+    margin: auto;
   }
 }
